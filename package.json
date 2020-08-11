@@ -1,0 +1,24 @@
+{
+  "name": "platzi-media-player",
+  "version": "1.0.0",
+  "description": "Proyecto del Curso Profesional de JavaScript de la Escuela de Javascript",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masterfabela/platzi-javascript-profesional.git"
+  },
+  "keywords": [
+    "platzi"
+  ],
+  "author": "Jose Ramón Vieites Romay <joseviromay@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/masterfabela/platzi-javascript-profesional/issues"
+  },
+  "homepage": "https://github.com/masterfabela/platzi-javascript-profesional#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
