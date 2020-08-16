@@ -1,8 +1,10 @@
+
+
 /**
  * 
  * @param {HTMLMediaElement} media 
  */
-function MediaPlayer(media) {
+export function MediaPlayer(media) {
     this.media = media;
   }
   

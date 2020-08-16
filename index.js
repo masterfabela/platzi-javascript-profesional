@@ -1,3 +1,5 @@
+import {MediaPlayer} from './models/MediaPlayer'
+
 const video = document.querySelector('video');
 const button = document.querySelector('button');
 
