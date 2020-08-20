@@ -1,0 +1,35 @@
+<html>
+	<head></head>
+	<body>
+		<script>
+			function saludar() {
+				console.log(`Hola soy ${this.name} ${this.apellido}`);
+			}
+
+			const jose = {
+				name: 'Jose',
+				apellido: 'Vieites',
+			};
+
+			saludar.call(jose);
+
+			function caminar(metros, direccion) {
+				console.log(`${this.name} camina ${metros} hacia ${direccion}`);
+			}
+
+			caminar.call(jose, 400, 'norte');
+
+			caminar.apply(jose, [800, 'noreste']);
+
+			const daniel = {
+				name: 'daniel',
+				apellido: 'sanchez',
+			};
+			const danielSaluda = saludar.bind(daniel);
+			danielSaluda();
+
+			const danielCamina = caminar.bind(daniel, 2 + 000, 'sur');
+			danielCamina(1000, 'este');
+		</script>
+	</body>
+</html>
