@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Prototype</title>
+	</head>
+	<body>
+		<a href="/ejercicios/">Go Back</a>
+		<p><em>Abre la consola</em></p>
+		<script>
+			const heroMethods = {
+				saludar: function () {
+					console.log(`Me llamo ${this.name}`);
+				},
+			};
+			function Hero(name) {
+				const hero = Object.create(heroMethods);
+				hero.name = name;
+				hero.saludar = heroMethods.saludar;
+				return hero;
+			}
+
+			const zelda = Hero('Zelda');
+			zelda.saludar();
+
+			const link = Hero('Link');
+			link.saludar();
+		</script>
+	</body>
+</html>
