@@ -6,22 +6,18 @@
 		<a href="/ejercicios/">Go Back</a>
 		<p><em>Abre la consola</em></p>
 		<script>
-			const heroMethods = {
-				saludar: function () {
-					console.log(`Me llamo ${this.name}`);
-				},
-			};
 			function Hero(name) {
-				const hero = Object.create(heroMethods);
-				hero.name = name;
-				hero.saludar = heroMethods.saludar;
-				return hero;
+				this.name = name;
 			}
 
-			const zelda = Hero('Zelda');
+			Hero.prototype.saludar = function () {
+				console.log(`Me llamo ${this.name}`);
+			};
+
+			const zelda = new Hero('Zelda');
 			zelda.saludar();
 
-			const link = Hero('Link');
+			const link = new Hero('Link');
 			link.saludar();
 		</script>
 	</body>
